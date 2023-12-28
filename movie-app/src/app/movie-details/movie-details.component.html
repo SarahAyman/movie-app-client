@@ -1,0 +1,54 @@
+<link href="/lib/lity/lity.min.css" rel="stylesheet">
+<script src="/lib/lity/lity.min.js"></script>
+
+<body style="background-color: black;">
+
+<div class="movie-card">
+  
+  <div class="container">
+    
+    <a [href]="movieDetails.trailer" data-lity>
+        <img [src]="movieDetails.poster_path" alt="cover" class="cover" 
+        style="height:300px; width:auto;"/></a>
+
+    <a [href]="movieDetails.trailer" data-lity>
+        <img src="./assets/play-button-icon.png" class="play"/></a>
+        
+    <div class="hero">
+            
+      <div class="details">
+      
+        <div class="title1"> {{movieDetails.title}} </div>
+
+        <div class="title2"> {{movieDetails.tagline}}</div>    
+        
+        <fieldset class="rating">
+           	<input type="radio" checked /><label></label>
+        </fieldset>
+
+        <span style="font-size: 18px; font-weight: bolder;"> {{movieDetails.vote_average}} </span>
+        <span style="font-size: 18px;">/10</span>
+
+        <span class="minutes"> {{movieDetails.runtime}} min</span>
+        
+      </div> <!-- end details -->
+      
+    </div> <!-- end hero -->
+    
+    <div class="description">
+      
+      <div class="column1">
+        <span class="tag" *ngFor="let genre of movieDetails.genres">{{genre}}</span>
+      </div> <!-- end column1 -->
+      
+      <div class="column2">
+        
+        <p> {{movieDetails.overview}} </p>
+        
+      </div> <!-- end column2 -->
+    </div> <!-- end description -->
+   
+  </div> <!-- end container -->
+</div> <!-- end movie-card -->
+
+</body>

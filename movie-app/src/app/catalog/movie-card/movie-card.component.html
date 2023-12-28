@@ -1,0 +1,19 @@
+<div class="movie_card">
+    <div class="info_section">
+      <div class="movie_header">
+        <img class="locandina" [src]="poster_path"/>
+        <h1>{{title}}</h1>
+        <h4>{{year}}</h4>
+      </div>
+      <div class="movie_desc">
+        <p class="text">
+          {{overview}}
+        </p>
+        <br>
+        <button class="watch-btn" (click)="loadDetails()"><i class="material-icons">&#xE037;</i>WATCH TRAILER</button>
+      </div>
+    </div>
+    <div class="blur_back"><img [src]="backdrop_path"/></div>
+  </div>
+  
+  
